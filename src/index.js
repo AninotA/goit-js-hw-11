@@ -26,7 +26,7 @@ input.addEventListener('submit', event => {
     return;
   }
   getImg(currentQuery, currentPage);
-  gallerySimle.next();
+ 
   gallerySimle.refresh();
 });
 
