@@ -23,11 +23,27 @@ body {
   text-align: center;
 }
 
+.input-form {
+  border-radius: 4px;
+  border: none;
+  padding: 4px;
+}
+
+.button-form {
+  border-radius: 4px;
+  border: none;
+  padding: 3px;
+}
 
 
-.load-more {
-  display: none;
+.load-more { 
+  margin: 0px auto 20px;
+  padding: 10px 20px;
+
   background-color: #2483d0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .gallery {
