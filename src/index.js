@@ -13,6 +13,9 @@ let currentPage = 1;
 let currentQuery = '';
 let gallerySimle = new SimpleLightbox('.gallery a');
 
+
+
+
 input.addEventListener('submit', event => {
   event.preventDefault();
   currentPage = 1;
@@ -20,10 +23,11 @@ input.addEventListener('submit', event => {
   currentQuery = event.currentTarget.searchQuery.value.trim();
   if (currentQuery === '') {
     btn.classList.add('load-more');
-    gallerySimle.refresh();
     return;
   }
   getImg(currentQuery, currentPage);
+  gallerySimle.next();
+  gallerySimle.refresh();
 });
 
 btn.addEventListener('click', event => {
