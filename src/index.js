@@ -11,7 +11,7 @@ const gallery = document.querySelector('.gallery');
 const btn = document.querySelector('.load-more');
 let currentPage = 1;
 let currentQuery = '';
-let gallerySimle = $('.gallery a').simpleLightbox();
+let gallerySimle = new SimpleLightbox('.gallery a');
 
 input.addEventListener('submit', event => {
   event.preventDefault();
@@ -21,7 +21,7 @@ input.addEventListener('submit', event => {
   if (currentQuery === '') {
     btn.classList.add('load-more');
     gallerySimle.refresh();
-    // return;
+    return;
   }
   getImg(currentQuery, currentPage);
 });
